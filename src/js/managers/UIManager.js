@@ -417,19 +417,18 @@ class UIManager {
     SoundManager.play(SOUNDS_CONST.OPEN)
     this.treasureEl.classList.add('visible')
     if (ExploreManager.treasureZone.type === LIGHT_RING_TYPE.RUPEE_0) {
-      this.treasureEl.children[0].innerHTML = `Congratulations! You've found a Silver Rupee! <img class="icon-rupee" src="/icons/rupee_counter_7.png" alt="" />`
+      this.treasureEl.children[0].innerHTML = `!Perfecto! !Has encontrado una Gema Plateada! <img class="icon-rupee" src="/icons/rupee_counter_7.png" alt="" />`
     } else if (ExploreManager.treasureZone.type === LIGHT_RING_TYPE.RUPEE_1) {
-      this.treasureEl.children[0].innerHTML = `Congratulations! You've found an Orange Rupee! <img class="icon-rupee" src="/icons/rupee_counter_6.png" alt="" />`
+      this.treasureEl.children[0].innerHTML = `!Perfecto! !Has encontrado una Gema Naranja! <img class="icon-rupee" src="/icons/rupee_counter_6.png" alt="" />`
     } else if (ExploreManager.treasureZone.type === LIGHT_RING_TYPE.TRIFORCE) {
       if (this.#nbTriforceFound === 2) {
-        this.treasureEl.children[0].innerHTML = `Congratulations! You've found the last Triforce Shards! You've
-        won the Master sword <img class="shield" src="/icons/master_sword.png" alt="" /> and Mirror Shield
-        <img class="shield" src="/icons/mirror_shield.png" alt="" />. You're boat now go 1.5x faster! Continue to
-        explore or try the Ruppee's game mode!`
+        this.treasureEl.children[0].innerHTML = `!Perfecto! !Has encontrado el último símbolo de la trifuerza! Has
+        ganado la espada maestra <img class="shield" src="/icons/master_sword.png" alt="" /> y escudo de espejo
+        <img class="shield" src="/icons/mirror_shield.png" alt="" />. ¡Tu barco ahora va 1,5 veces más rápido! ¡Continúa explorando o prueba el modo de Consigue las Gemas!`
       } else {
-        this.treasureEl.children[0].innerHTML = `Congratulations! You've found a Triforce Shard! <img class="icon-shard" src="/icons/shard.png" alt="" /> ${
+        this.treasureEl.children[0].innerHTML = `!Perfecto! !Has encontrado un símbolo de la trifuerza! <img class="icon-shard" src="/icons/shard.png" alt="" /> Te faltan ${
           2 - this.#nbTriforceFound
-        } more left to find!`
+        } más para ganar!`
       }
       this.#nbTriforceFound++
 
